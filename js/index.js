@@ -55,4 +55,58 @@ let h1 = document.querySelector("h1").textContent = siteContent.cta["h1"];
 let buttonText = document.querySelector("button").textContent = siteContent.cta["button"];
 
 let logo2 = document.getElementById("cta-img");
-logo2.setAttribute('src', siteContent["cta"]["img-src"])
+logo2.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let mainContentItems = document.querySelectorAll(".main-content h4, .main-content p, .main-content img")
+let mainContentItems2 = Array.from(mainContentItems)
+console.log(mainContentItems2)
+mainContentItems2.map((item, index) => {
+  Object.keys(siteContent["main-content"])[index].includes("img") ? 
+      item.src = Object.values(siteContent["main-content"])[index] :
+      item.textContent = Object.values(siteContent["main-content"])[index]
+})
+
+let contactItems = document.querySelectorAll(".contact h4, .contact p ")
+let contactItems2 = Array.from(contactItems)
+contactItems2.map((item , index) => {
+item.textContent = Object.values(siteContent.contact)[index];
+})
+
+let footerItems = document.querySelectorAll("footer p")
+let footerItems2 = Array.from(footerItems)
+footerItems2.map((item , index) => {
+item.textContent = Object.values(siteContent.footer)[index];
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let featureText = document.querySelectorAll(".top-content h4")[0].textContent = siteContent["main-content"]["features-h4"];
+
+// let featureText2 = document.querySelectorAll(".top-content p")[0].textContent = siteContent["main-content"]["features-content"];
+
+// let aboutText = document.getElementsByClassName("text-content")[1].textContent = siteContent["main-content"]["about-h4"];
+
+// let aboutText2 = document.getElementsByClassName("text-content")[1].textContent = siteContent["main-content"]["about-content"];
+
+// let logo3 = document.getElementById("middle-img");
+// logo3.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+// let serviceText = document.getElementsByClassName("text-content")[2].textContent = siteContent["main-content"]["services-h4"];
+
+// let serviceText2 = document.getElementsByClassName("text-content")[2].textContent = siteContent["main-content"]["services-content"];
