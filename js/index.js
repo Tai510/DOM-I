@@ -53,7 +53,6 @@ let h1 = document.querySelector("h1").textContent = siteContent.cta["h1"];
 
 let buttonText = document.querySelector("button").textContent = siteContent.cta["button"];
 
-
 let logo2 = document.getElementById("cta-img");
 logo2.setAttribute('src', siteContent["cta"]["img-src"]);
 
@@ -72,6 +71,12 @@ h4FontStyle2.map((item , index) => {
 item.style.color = "pink";
 item.style.fontSize = "30px";
 item.style.textDecoration = "underline";
+})
+
+let pFontStyle = document.querySelectorAll(".main-content p")
+let pFontStyle2 = Array.from(pFontStyle)
+pFontStyle2.map((item , index) => {
+item.style.fontFamily = 'Permanent Marker', 'cursive';
 })
 
 let contactItems = document.querySelectorAll(".contact h4, .contact p ")
@@ -95,6 +100,10 @@ buttonstyle.style.borderRadius = "125%";
 buttonstyle.style.background = "pink";
 buttonstyle.style.border = "5px solid black"
 buttonstyle.style.height = "120px";
+buttonstyle.style.fontFamily = 'Permanent Marker', 'cursive';
+buttonstyle.style.fontSize = "25px";
+
+
 
 
 
