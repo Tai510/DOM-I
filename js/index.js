@@ -40,3 +40,101 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+let headerNav = document.querySelectorAll("a");
+let headerNav2 = Array.from(headerNav);
+headerNav2.map((item , index) => {
+item.textContent = Object.values(siteContent.nav)[index];
+item.style.color = "green"
+})
+
+let h1 = document.querySelector("h1").textContent = siteContent.cta["h1"];
+
+let buttonText = document.querySelector("button").textContent = siteContent.cta["button"];
+
+let logo2 = document.getElementById("cta-img");
+logo2.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let mainContentItems = document.querySelectorAll(".main-content h4, .main-content p, .main-content img")
+let mainContentItems2 = Array.from(mainContentItems)
+console.log(mainContentItems2)
+mainContentItems2.map((item, index) => {
+  Object.keys(siteContent["main-content"])[index].includes("img") ? 
+      item.src = Object.values(siteContent["main-content"])[index] :
+      item.textContent = Object.values(siteContent["main-content"])[index]
+})
+
+let h4FontStyle = document.querySelectorAll(".main-content h4")
+let h4FontStyle2 = Array.from(h4FontStyle)
+h4FontStyle2.map((item , index) => {
+item.style.color = "pink";
+item.style.fontSize = "30px";
+item.style.textDecoration = "underline";
+})
+
+let pFontStyle = document.querySelectorAll(".main-content p")
+let pFontStyle2 = Array.from(pFontStyle)
+pFontStyle2.map((item , index) => {
+item.style.fontFamily = 'Permanent Marker', 'cursive';
+})
+
+let contactItems = document.querySelectorAll(".contact h4, .contact p ")
+let contactItems2 = Array.from(contactItems)
+contactItems2.map((item , index) => {
+item.textContent = Object.values(siteContent.contact)[index];
+item.style.color = "red";
+})
+
+let footerItems = document.querySelectorAll("footer p")
+let footerItems2 = Array.from(footerItems)
+footerItems2.map((item , index) => {
+item.textContent = Object.values(siteContent.footer)[index];
+})
+
+let tag = document.querySelector("h1");
+tag.style.color = "blue";
+
+let buttonstyle = document.querySelector("button");
+buttonstyle.style.borderRadius = "125%";
+buttonstyle.style.background = "pink";
+buttonstyle.style.border = "5px solid black"
+buttonstyle.style.height = "120px";
+buttonstyle.style.fontFamily = 'Permanent Marker', 'cursive';
+buttonstyle.style.fontSize = "25px";
+
+
+
+
+
+
+
+
+
+
+// const ctaImg = document.querySelector("#cta-img").src = siteContent.cta["img-src"];
+
+
+
+
+
+
+
+
+
+
+
+// let featureText = document.querySelectorAll(".top-content h4")[0].textContent = siteContent["main-content"]["features-h4"];
+
+// let featureText2 = document.querySelectorAll(".top-content p")[0].textContent = siteContent["main-content"]["features-content"];
+
+// let aboutText = document.getElementsByClassName("text-content")[1].textContent = siteContent["main-content"]["about-h4"];
+
+// let aboutText2 = document.getElementsByClassName("text-content")[1].textContent = siteContent["main-content"]["about-content"];
+
+// let logo3 = document.getElementById("middle-img");
+// logo3.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+// let serviceText = document.getElementsByClassName("text-content")[2].textContent = siteContent["main-content"]["services-h4"];
+
+// let serviceText2 = document.getElementsByClassName("text-content")[2].textContent = siteContent["main-content"]["services-content"];
