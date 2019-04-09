@@ -46,13 +46,13 @@ let headerNav = document.querySelectorAll("a");
 let headerNav2 = Array.from(headerNav);
 headerNav2.map((item , index) => {
 item.textContent = Object.values(siteContent.nav)[index];
+item.style.color = "green"
 })
-
-
 
 let h1 = document.querySelector("h1").textContent = siteContent.cta["h1"];
 
 let buttonText = document.querySelector("button").textContent = siteContent.cta["button"];
+
 
 let logo2 = document.getElementById("cta-img");
 logo2.setAttribute('src', siteContent["cta"]["img-src"]);
@@ -66,10 +66,19 @@ mainContentItems2.map((item, index) => {
       item.textContent = Object.values(siteContent["main-content"])[index]
 })
 
+let h4FontStyle = document.querySelectorAll(".main-content h4")
+let h4FontStyle2 = Array.from(h4FontStyle)
+h4FontStyle2.map((item , index) => {
+item.style.color = "pink";
+item.style.fontSize = "30px";
+item.style.textDecoration = "underline";
+})
+
 let contactItems = document.querySelectorAll(".contact h4, .contact p ")
 let contactItems2 = Array.from(contactItems)
 contactItems2.map((item , index) => {
 item.textContent = Object.values(siteContent.contact)[index];
+item.style.color = "red";
 })
 
 let footerItems = document.querySelectorAll("footer p")
@@ -78,6 +87,14 @@ footerItems2.map((item , index) => {
 item.textContent = Object.values(siteContent.footer)[index];
 })
 
+let tag = document.querySelector("h1");
+tag.style.color = "blue";
+
+let buttonstyle = document.querySelector("button");
+buttonstyle.style.borderRadius = "125%";
+buttonstyle.style.background = "pink";
+buttonstyle.style.border = "5px solid black"
+buttonstyle.style.height = "120px";
 
 
 
@@ -85,6 +102,8 @@ item.textContent = Object.values(siteContent.footer)[index];
 
 
 
+
+// const ctaImg = document.querySelector("#cta-img").src = siteContent.cta["img-src"];
 
 
 
